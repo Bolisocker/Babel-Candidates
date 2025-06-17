@@ -1,0 +1,16 @@
+@use "@angular/material" as mat;
+
+:host {
+  button.invalid {
+    @include mat.button-overrides(
+      (
+        outlined-outline-color: var(--mat-sys-error),
+        outlined-label-text-color: var(--mat-sys-error),
+      )
+    );
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+}

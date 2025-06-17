@@ -1,0 +1,17 @@
+@use "@angular/material" as mat;
+:host {
+  mat-icon {
+    @include mat.icon-overrides(
+      (
+        color: green,
+      )
+    );
+    &.unavailable{
+      @include mat.icon-overrides(
+      (
+        color: var(--mat-sys-error),
+      )
+    );  
+    }
+  }
+}

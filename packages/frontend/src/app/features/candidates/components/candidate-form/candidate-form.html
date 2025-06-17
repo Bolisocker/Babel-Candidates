@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>New Candidate</h2>
+<mat-dialog-content>
+  <form
+    #ngForm="ngForm"
+    id="candidateForm"
+    [formGroup]="candidateForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" />
+      @if(candidateForm.getError('required', 'name')){
+      <mat-error>Required field</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Surname</mat-label>
+      <input matInput formControlName="surname" />
+
+      @if(candidateForm.getError('required', 'surname')){
+      <mat-error>Required field</mat-error>
+      }
+    </mat-form-field>
+    @if(candidateForm.get('file'); as fileControl){
+    <button
+      matButton="outlined"
+      type="button"
+      [class.invalid]="ngForm.submitted && fileControl.getError('required')"
+      (click)="fileInput.click()"
+    >
+      @if(selectedFile){ {{selectedFile.name}} }@else{Choose file*}
+    </button>
+    <input
+      hidden
+      #fileInput
+      type="file"
+      formControlName="file"
+      (change)="onFileChange($event)"
+      accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    />}
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button matButton mat-dialog-close type="button">Cancel</button>
+  <button matButton="filled" type="submit" form="candidateForm">Submit</button>
+</mat-dialog-actions>
