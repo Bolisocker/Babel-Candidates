@@ -4,9 +4,10 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
-  "devDependencies": {},
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.7"
+  },
   "workspaces": [
     "packages/*"
-  ],
-  "dependencies": {}
+  ]
 }
