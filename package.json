@@ -1,0 +1,12 @@
+{
+  "name": "@babel/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "devDependencies": {},
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {}
+}
