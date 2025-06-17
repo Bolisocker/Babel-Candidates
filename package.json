@@ -5,6 +5,7 @@
   "scripts": {},
   "private": true,
   "devDependencies": {
+    "@angular/cli": "^20.0.2",
     "@nestjs/cli": "^11.0.7"
   },
   "workspaces": [
