@@ -24,3 +24,7 @@ npm run start -w backend
 # para que los cambios se apliquen sin necesidad de volver a arrancar
 npm run start:dev -w backend
 ```
+
+## Pruebas
+
+Se incluye un [fichero Excel](./Test.xls) a modo de ejemplo con el formato que necesita el backend para ser procesado
